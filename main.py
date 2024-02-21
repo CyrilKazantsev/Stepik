@@ -39,4 +39,20 @@ def bertran():
         if c:
             count += 1
     print(count)
-bertran()
+# bertran()
+
+# №5 Пузырьковая сортировка
+def bubble_sort():
+    i = int(input())
+    numbers = list(map(int, list(input().split())))
+    print(numbers)
+    count = 0
+    for a in range(i - 1):
+        for b in range(i - a - 1):
+            if numbers[b] > numbers[b + 1]:
+                print(numbers[b], numbers[b + 1])
+                numbers[b], numbers[b + 1] = numbers[b + 1], numbers[b]
+                count += 1
+    print(" ".join(map(str, numbers)))
+    print(count)
+# bubble_sort()
