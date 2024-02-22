@@ -56,3 +56,15 @@ def bubble_sort():
     print(" ".join(map(str, numbers)))
     print(count)
 # bubble_sort()
+
+
+# №6 Нахождение целых пар чисел формул
+def eq_system():
+    numbers = list(map(int, list(input().split())))
+    count = 0
+    for a in range(numbers[0]):
+        for b in range(numbers[1]):
+            if numbers[1] - b**2 == a and numbers[0] - a**2 == b:
+                count += 1
+    print(count)
+eq_system()
