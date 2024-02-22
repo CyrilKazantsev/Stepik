@@ -41,16 +41,14 @@ def bertran():
     print(count)
 # bertran()
 
-# №5 Пузырьковая сортировка
+# №5 Пузырьковая сортировка с количеством действий
 def bubble_sort():
     i = int(input())
     numbers = list(map(int, list(input().split())))
-    print(numbers)
     count = 0
     for a in range(i - 1):
         for b in range(i - a - 1):
             if numbers[b] > numbers[b + 1]:
-                print(numbers[b], numbers[b + 1])
                 numbers[b], numbers[b + 1] = numbers[b + 1], numbers[b]
                 count += 1
     print(" ".join(map(str, numbers)))
@@ -67,4 +65,16 @@ def eq_system():
             if numbers[1] - b**2 == a and numbers[0] - a**2 == b:
                 count += 1
     print(count)
-eq_system()
+# eq_system()
+
+
+# №5 Сортировка вставками
+def insertion_sort():
+    i = int(input())
+    numbers = list(map(int, list(input().split())))
+    for a in range(i - 1):
+        for b in range(a + 1, 0, -1):
+            if numbers[b] < numbers[b - 1]:
+                numbers[b], numbers[b - 1] = numbers[b - 1], numbers[b]
+    print(" ".join(map(str, numbers)))
+# insertion_sort()
