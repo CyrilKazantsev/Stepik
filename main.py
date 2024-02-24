@@ -78,3 +78,20 @@ def insertion_sort():
                 numbers[b], numbers[b - 1] = numbers[b - 1], numbers[b]
     print(" ".join(map(str, numbers)))
 # insertion_sort()
+
+
+# №6 Вычисление суммы диагонали матрицы
+def matrix_center():
+    n = int(input())
+    matrix = []
+    count = 0
+    for i in range(n):
+        matrix.append(
+            list(map(int, input().split()))
+        )
+    for a in range(n):
+        for b in range(n):
+            if a == b:
+                count += matrix[a][b]
+    print(count)
+# matrix_center()
